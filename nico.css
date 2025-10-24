@@ -1,0 +1,82 @@
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .image-section, 
+    .text-section,
+    .socials {
+        grid-column: 1 / 11;
+    }
+
+    .text-section {
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        padding: 8px 15px;
+        margin-left: rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none; /* hide nav links */
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .text-section li:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    .text-section li:nth-child(2) {
+        font-size: 1.8rem;
+    }
+
+    .text-section li:nth-child(3) {
+        font-size: 1rem;
+    }
+
+    .image-section img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .socials img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+    .text-section li:nth-child(1) {
+        font-size: 1.8rem;
+    }
+
+    .text-section li:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .text-section li:nth-child(3) {
+        font-size: 0.9rem;
+    }
+
+    .image-section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .socials {
+        gap: 10px;
+    }
+}

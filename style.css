@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Pixelify Sans", sans-serif;
+  color: black;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 10px 30px;
+  text-align: left;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.topbar .name {
+  font-weight: bold;
+  display: block;
+}
+
+.topbar .section {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+/* ===== GRID ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  grid-column: 1 / 11;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+#logo {
+  position: absolute;  
+  left: 2rem;         
+  top: 1rem;         
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  background-color: black;
+  border-radius: 25px;
+  padding: 8px 25px;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #775f5f;
+  transform: scale(1.1);
+}
+
+/* ===== PROFILE IMAGE ===== */
+.image-section {
+  margin: 10px;
+  grid-column: 1 / 11;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.image-section img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+/* ===== SOCIAL ICONS ===== */
+.socials {
+  grid-column: 1 / 11;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.socials img {
+  width: 35px;
+  height: 35px;
+  padding: 3px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* ===== TEXT SECTION BELOW IMAGE ===== */
+.text-section {
+  grid-column: 1 / 11;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 1rem;
+  
+}
+
+.text-section ul {
+  margin-bottom: 30rem;
+  list-style: none;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.text-section li:nth-child(1) {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.text-section li:nth-child(2) {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.text-section li:nth-child(3) {
+  font-size: 1.4rem;
+}
+
+/* ===== HAMBURGER MENU RESPONSIVE ===== */
+@media screen and (max-width: 700px) {
+  .topbar {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px 15px;
+    gap: 1rem;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked + #menu + #nav-links {
+    display: flex;
+  }
+
+  .navbar a {
+    font-size: 1.2rem;
+  }
+
+  .image-section {
+    grid-column: 1 / 11;
+    text-align: center;
+  }
+
+  .text-section {
+    grid-column: 1 / 11;
+    margin-top: 1.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-section li:nth-child(1),
+  .text-section li:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  .text-section li:nth-child(3) {
+    font-size: 1rem;
+  }
+}
