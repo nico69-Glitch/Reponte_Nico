@@ -104,6 +104,8 @@ body {
   color: black;
   max-width: 420px;
   transition: all 0.3s ease-in-out;
+  background-color: antiquewhite;
+  border-radius: 25px;
 }
 
 .text-section h2 {
